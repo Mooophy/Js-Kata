@@ -18,6 +18,4 @@ describe('ch4:', function(){
   it('comma operator', function(){
     expect((i = 42, j = 34, k = 0.5)).toBe(0.5);
   })
-
-
 });
