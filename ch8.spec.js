@@ -77,4 +77,8 @@ describe('ch8',function(){
     expect(g(3)).toBe(6);
   });
 
+  it('Function constructor', function(){
+    var mul = new Function('x', 'y', 'return x * y;');
+    expect(mul(2,4)).toEqual(8);
+  });
 });
