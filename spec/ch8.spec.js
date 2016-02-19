@@ -53,4 +53,28 @@ describe('ch8',function(){
     expect(john.name).toBe('John');
   });
 
+  it('function with bind',function(){
+    function f(y){
+      return this.x + y;
+    }
+    var o = {x : 42};
+    var g = f.bind(o);
+
+    expect(g(3)).toBe(45);
+  });
+
+  it('currying with bind', function(){
+    var sum = function(lhs, rhs){
+      return lhs + rhs;
+    };
+    var succ = sum.bind(null, 1);
+    expect(succ(2)).toBe(3);
+
+    function f(y, z){
+      return this.x + y + z
+    }
+    var g = f.bind({x:1}, 2);
+    expect(g(3)).toBe(6);
+  });
+
 });
