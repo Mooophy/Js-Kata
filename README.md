@@ -1,2 +1,1 @@
-# Js-Kata
-Reading [Eloquent JavaScript](http://eloquentjavascript.net/)
+# Unit tests for [Javascript Definitive Guide 6th](http://www.amazon.com/JavaScript-Definitive-Guide-Activate-Guides/dp/0596805527)
