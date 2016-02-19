@@ -28,4 +28,29 @@ describe('ch8',function(){
 
     expect([1,3,5].every(odd)).toBe(true);
   });
+
+  it('function with apply', function(){
+    var john = {age: 14};
+    var addName = function(name){
+      this.name = name;
+      return this;
+    };
+
+    var returned = addName.apply(john, ['John']);
+    expect(returned).toBe(john);
+    expect(john.name).toBe('John');
+  });
+
+  it('function with call', function(){
+    var john = {age: 14};
+    var addName = function(name){
+      this.name = name;
+      return this;
+    };
+
+    var returned = addName.call(john, 'John');
+    expect(returned).toBe(john);
+    expect(john.name).toBe('John');
+  });
+
 });
